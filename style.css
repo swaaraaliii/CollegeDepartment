@@ -1,0 +1,530 @@
+
+/* ==============================
+   GLOBAL STYLING
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #142d5c;
+    --secondary: #2563eb;
+    --accent: #60a5fa;
+    --background: #f5f8ff;
+    --white: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==============================
+   NAVIGATION BAR
+================================ */
+
+header {
+    background: var(--white);
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 18px rgba(15, 35, 75, 0.08);
+}
+
+.logo h2 {
+    color: var(--primary);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--primary);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* ==============================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(110deg,
+        rgba(15, 35, 75, 0.97),
+        rgba(37, 99, 235, 0.85));
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tag {
+    color: #bfdbfe;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 49px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #93c5fd;
+}
+
+.hero-content > p:not(.tag) {
+    color: #e2e8f0;
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--primary);
+    padding: 13px 27px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #dbeafe;
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   COMMON SECTIONS
+================================ */
+
+.section {
+    padding: 80px 8%;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 10px;
+    margin: 14px auto 25px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--muted);
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 14px;
+}
+
+.intro {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #475569;
+    font-size: 15px;
+}
+
+.light-section {
+    background: var(--background);
+}
+
+/* ==============================
+   STATISTICS
+================================ */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.10);
+}
+
+.stat-card h3 {
+    color: var(--secondary);
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* ==============================
+   FACULTY SECTION
+================================ */
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 25px;
+}
+
+.faculty-card {
+    background: var(--white);
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-7px);
+    border-color: #bfdbfe;
+    box-shadow: 0 15px 30px rgba(20, 45, 92, 0.10);
+}
+
+.faculty-icon {
+    width: 75px;
+    height: 75px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: 0 auto 18px;
+}
+
+.faculty-card h3 {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.faculty-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.faculty-card .designation {
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.faculty-note {
+    max-width: 850px;
+    margin: 30px auto;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ==============================
+   LABS & ACHIEVEMENTS
+================================ */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(20, 45, 92, 0.09);
+    border-color: #bfdbfe;
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eff6ff;
+    border-radius: 12px;
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    color: var(--primary);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==============================
+   SYLLABUS
+================================ */
+
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 23px;
+}
+
+.syllabus-card {
+    background: var(--white);
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    border-top: 4px solid var(--secondary);
+    transition: 0.3s;
+}
+
+.syllabus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(20, 45, 92, 0.08);
+}
+
+.syllabus-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.syllabus-card p {
+    color: var(--muted);
+    font-size: 13px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.syllabus-card p:last-child {
+    border-bottom: none;
+}
+
+/* ==============================
+   BUTTON ALIGNMENT
+================================ */
+
+.center {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.center .btn {
+    background: var(--primary);
+    color: white;
+}
+
+.center .btn:hover {
+    background: var(--secondary);
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    background: #102347;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 25px;
+}
+
+footer h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cbd5e1;
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+.footer-links {
+    margin: 22px 0;
+}
+
+.footer-links a {
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 12px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0 10px;
+        gap: 17px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-content > p:not(.tag) {
+        font-size: 15px;
+    }
+
+    .stats-grid,
+    .faculty-grid,
+    .card-grid,
+    .syllabus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
